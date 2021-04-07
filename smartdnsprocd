@@ -1,0 +1,22 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+USE_PROCD=1
+
+SMARTDNS="/etc/init.d/smartdns start"
+
+start_service() {
+ procd_open_instance
+ procd_set_param command "$SMARTDNS"
+ procd_set_param respawn
+ procd_close_instance
+}
+
+stop_service() {
+rm -f /var/run/smartdns.pid
+}
+
+restart() {
+stop
+start
+}
