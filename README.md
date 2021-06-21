@@ -11,3 +11,5 @@ OpenWrt上Smartdns的自动守护进程，监控smartdns运行状态，在崩溃
 执行 pgrep smartdns 查看smartdns的进程号  
 执行 kill -s 9 进程号 杀死进程，此时再快速执行 pgrep smartdns 应该不会有smartdns进程号出现  
 等待几秒后执行 pgrep smartdns 发现smartdns以新的进程号启动成功  
+
+service smartdns stop 并不会让Smartdns守护进程重启Smartdns
