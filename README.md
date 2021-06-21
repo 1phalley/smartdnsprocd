@@ -2,7 +2,7 @@
 OpenWrt上Smartdns的自动守护进程，监控smartdns运行状态，在崩溃时自动重启。  
 
 使用方法：  
-将smartdnsprocd文件放到 /etc/init.d 目录下执行 chmod 755 smartdnsprocd 赋予权限  
+将smartdnsprocd文件放到 /etc/init.d 目录下执行 chmod 755 /etc/init.d/smartdnsprocd 赋予权限  
 开机自启 service smartdnsprocd enable  
 开始监控 service smartdnsprocd start  
 停止监控 service smartdnsprocd stop  
